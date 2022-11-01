@@ -14,7 +14,10 @@
 
   // Modified the if to return if the newValue == oldValue to avoid
   // unecessary trips to the server
-  if (isLoading || newValue === '' || newValue == oldValue) {
+//  if (isLoading || newValue === '' || newValue == oldValue) {
+//    return;
+//  }
+  if (isLoading && g_form.isNewRecord() == false || newValue === '' || newValue == oldValue) {
     return;
   }
 
